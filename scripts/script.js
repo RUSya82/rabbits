@@ -26,10 +26,10 @@ const moveRight = function (elem) {
     prevElem && prevElem.before(elem);
 }
 const moveTop = function (elem) {
-    const elements = [...document.querySelectorAll('.block')];
-    const toggleElem = elements[elements.findIndex(item => item === elem) - 5];
-    const prevElem = elements[elements.findIndex(item => item === elem) - 1];
-    toggleElem && (toggleElem.after(elem) || prevElem.after(toggleElem));
+    const elements = [...document.querySelectorAll('.block')];      //собираем в массив
+    const toggleElem = elements[elements.findIndex(item => item === elem) - 5]; //ищем элемент перед которым вставляем по индексу
+    const prevElem = elements[elements.findIndex(item => item === elem) - 1];   //ищем предыдущий элемент
+    toggleElem && (toggleElem.after(elem) || prevElem.after(toggleElem)); //есди toggleElem есть, то вставляем после него наш элемент, а после предыдущего вставляем toggleElem
 }
 const moveDown = function (elem) {
     const elements = [...document.querySelectorAll('.block')];
