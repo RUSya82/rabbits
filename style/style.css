@@ -24,7 +24,7 @@
     font-family: Roboto, sans-serif;
 }
 .square-body{
-    max-width: 780px;
+    width: 780px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
